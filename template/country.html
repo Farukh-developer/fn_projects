@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<nav>
+  <img src="{% static 'images/country.jpeg' %}" style="width: 1600px; height: 500px; margin-bottom: 5px; border-radius: 5px;"   alt="">
+
+    <table class="table" style="border: 1px solid blue;" >
+        <thead>
+          <tr >
+            <th scope="col">id</th>
+            <th scope="col">Capital_city</th>
+            <th scope="col">population</th>
+            <th scope="col">language</th>
+            <th scope="col">date</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for country in count %}
+          <tr>
+            <th scope="row" style="border: 1px solid blue;">{{ country.id }}</th>
+            <td>{{ country.capital_city }}</td>
+            <td>{{ country.population }}</td>
+            <td>{{ country.language }}</td>
+            <td>{{ country.date }}</td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+</nav>
+
+{% endblock content %}
+
+

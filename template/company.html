@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<nav>
+  <img src="{% static 'images/company.jpeg' %}" style="width: 1600px; height: 500px; margin-bottom: 5px; border-radius: 5px;"   alt="">
+    <table class="table" style="border: 1px solid blue;">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Company_name</th>
+            <th scope="col">location</th>
+            <th scope="col">date</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for company in comp %}
+          <tr>
+            <th scope="row" style="border: 1px solid blue;">{{ company.id }}</th>
+            <td>{{ company.company_name }}</td>
+            <td>{{ company.location }}</td>
+            <td>{{ company.date }}</td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+</nav>
+
+{% endblock content %}
+
+
