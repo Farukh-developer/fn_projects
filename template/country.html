@@ -11,7 +11,6 @@
             <th scope="col">id</th>
             <th scope="col">Capital_city</th>
             <th scope="col">population</th>
-            <th scope="col">language</th>
             <th scope="col">date</th>
 
           </tr>
@@ -22,7 +21,9 @@
             <th scope="row" style="border: 1px solid blue;">{{ country.id }}</th>
             <td>{{ country.capital_city }}</td>
             <td>{{ country.population }}</td>
-            <td>{{ country.language }}</td>
+            
+            <td> <a class="btn btn-outline-primary" href="{% url 'read_country' country.id %}"> CRUD </a></td>
+            
             <td>{{ country.date }}</td>
           </tr>
           {% endfor %}

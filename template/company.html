@@ -9,7 +9,7 @@
           <tr>
             <th scope="col">id</th>
             <th scope="col">Company_name</th>
-            <th scope="col">location</th>
+            
             <th scope="col">date</th>
           </tr>
         </thead>
@@ -18,7 +18,9 @@
           <tr>
             <th scope="row" style="border: 1px solid blue;">{{ company.id }}</th>
             <td>{{ company.company_name }}</td>
-            <td>{{ company.location }}</td>
+            <td>
+            <a class="btn btn-outline-primary" href="{% url 'read_one_company' company.id %}"> CRUD </a>
+            </td>
             <td>{{ company.date }}</td>
           </tr>
           {% endfor %}

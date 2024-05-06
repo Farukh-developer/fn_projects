@@ -9,8 +9,6 @@
         <thead>
           <tr>
             <th scope="col">id</th>
-            <th scope="col">name</th>
-            <th scope="col">country</th>
             <th scope="col">date</th>
           </tr>
         </thead>
@@ -19,7 +17,9 @@
           <tr>
             <th scope="row" style="border: 1px solid blue;">{{ food.id }}</th>
             <td>{{ food.name }}</td>
-            <td>{{ food.country }}</td>
+            <td>
+              <a class="btn btn-outline-success" href="{% url 'read_food' food.id %}">CRUD</a>
+            </td>
             <td>{{ food.date }}</td>
           </tr>
           {% endfor %}

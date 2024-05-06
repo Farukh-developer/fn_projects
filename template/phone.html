@@ -11,7 +11,7 @@
             <th scope="col">id</th>
             <th scope="col">model</th>
             <th scope="col">color</th>
-            <th scope="col">price</th>
+            <th scope="col">Log in</th>
             <th scope="col">date</th>
           </tr>
         </thead>
@@ -21,7 +21,9 @@
             <th scope="row" style="border: 1px solid blue;">{{ phone.id }}</th>
             <td>{{ phone.model }}</td>
             <td>{{ phone.color }}</td>
-            <td>{{ phone.price }}</td>
+          <td> <a class="btn btn-outline-warning" href="{% url 'read_phone' phone.id %}"> Press </a>
+            
+                      </td>
             <td>{{ phone.date }}</td>
 
           </tr>
