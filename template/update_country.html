@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>This is NEw adding path for Updating Country</h1>
+
+
+
+<div class="container">
+    <form method="post">
+    {% csrf_token %}
+    <label for="capital_city" class="form-label">capital_city</label>
+    <input placeholder="enter City" id="capital_city" type="text" value="{{count.capital_city}}" name="capital_city" class="form-control" >
+
+    <label for="population" class="form-label"></label>>Population</label>
+    <input placeholder="population" id="population" type="number" value="{{count.population}}" name="population" class="form-control">
+
+
+    <label for="language" class="form-label"></label>>lenguage</label>
+    <input placeholder="language" id="language" type="text" value="{{count.language}}" name="language" class="form-control">
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+</div>
+{% endblock content %}

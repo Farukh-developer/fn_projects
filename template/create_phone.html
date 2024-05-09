@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>This is NEw adding path for Phone</h1>
+
+
+
+<div class="container">
+    <form method="post" action="{% url 'save_phone' %}">
+    {% csrf_token %}
+    <label for="model" class="form-label">Model</label>
+    <input placeholder="model" id="model" type="text" name="model" class="form-control" >
+
+    <label for="color" class="form-label"></label>>Color</label>
+    <input placeholder="color" id="color" type="text" name="color" class="form-control">
+
+    <label for="price" class="form-label">Price</label>
+    <input placeholder="price" type="number" name="price" class="form-control">
+
+
+
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+</div>
+{% endblock content %}

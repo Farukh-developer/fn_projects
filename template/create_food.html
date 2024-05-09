@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>This is New adding path for Updating Food</h1>
+
+
+
+<div class="container" >
+    <form method="post" action="{% url 'save_food' %}">
+    {% csrf_token %}
+    <label for="name" class="form-label">Name</label>
+    <input placeholder="name" id="name" type="text" value="{{meal.name}}" name="name" class="form-control" >
+
+    <label for="country" class="form-label"></label>>Country</label>
+    <input placeholder="country" id="country" type="text" value="{{meal.country}}" name="country" class="form-control">
+    
+    <button type="submit" class="btn btn-success">Save</button>
+{% endblock content %}

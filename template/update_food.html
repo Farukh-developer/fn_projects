@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>This is New adding path for Updating Company</h1>
+
+
+
+<div class="container">
+    <form method="post">
+    {% csrf_token %}
+    <label for="name" class="form-label">capital_city</label>
+    <input placeholder="name" id="name" type="text" value="{{mobile.model}}" name="name" class="form-control" >
+
+    <label for="country" class="form-label"></label>>Population</label>
+    <input placeholder="country" id="country" type="text" value="{{mobile.color}}" name="country" class="form-control">
+    
+    
+
+    <button type="submit" class="btn btn-success">Save</button>
+{% endblock content %}

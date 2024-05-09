@@ -3,8 +3,11 @@
 {% block content %}
 {% load static %}
 <nav>
-  <img src="{% static 'images/laptop.jpeg' %}" style="width: 1600px; height: 500px; margin-bottom: 5px; border-radius: 5px;"   alt="">
 
+<h1>
+  Laptop
+</h1>
+<a href="{% url 'create_laptop' %}" class="btn btn-success">Create</a>
     <table class="table" style="border: 1px solid blue;">
         <thead>
           <tr>
@@ -24,9 +27,17 @@
             <td>{{ laptop.price }}</td>
             <td>{{ laptop.date }}</td>
            <td>
-            <a class="btn btn-outline-danger" href="{% url 'read_latop' laptop.id %}"> Press</a>
-
+            <a class="btn btn-outline-primary" href="{% url 'read_latop' laptop.id %}"> Read</a>
            </td>
+           <td>
+            <a class="btn btn-outline-info" href="{% url 'update_laptop' laptop.id %}"> Update</a>
+           </td>
+           <td>
+            <td>
+              <a class="btn btn-outline-danger" href="{% url 'delete_laptop' laptop.id %}"> Update</a>
+             </td>
+             <td>
+            
           </tr>
           {% endfor %}
           </tbody>
